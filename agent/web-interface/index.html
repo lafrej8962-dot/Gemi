@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonIA - AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>🤖 MonIA</h1>
+                <p class="subtitle">Your AI Assistant</p>
+            </div>
+            <div class="status-indicator">
+                <span id="statusDot" class="status-dot connected"></span>
+                <span id="statusText">Connected</span>
+            </div>
+        </header>
+
+        <div class="chat-container">
+            <div id="chatMessages" class="chat-messages">
+                <div class="message-group bot-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hello! I'm MonIA, your AI assistant. How can I help you today? You can ask me about orders, or anything else!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <form id="chatForm" class="chat-form">
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="userInput"
+                        class="user-input"
+                        placeholder="Type your message..."
+                        autocomplete="off"
+                        aria-label="User message input"
+                    >
+                    <button type="submit" class="send-btn" aria-label="Send message">
+                        <span class="send-icon">➤</span>
+                    </button>
+                </div>
+            </form>
+            <div class="info-text">
+                <small>Try asking: "What's the status of order 100?"</small>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Powered by Gemini 2.5 Flash | <a href="#" onclick="clearChat(); return false;">Clear Chat</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
