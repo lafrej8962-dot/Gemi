@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕐 Digital Clock</h1>
+            <p class="subtitle">Current time across the world</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-group">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search time zones..."
+                    autocomplete="off"
+                >
+            </div>
+            <div class="button-group">
+                <button id="addZoneBtn" class="btn btn-primary">+ Add Time Zone</button>
+                <button id="resetBtn" class="btn btn-secondary">Reset to Default</button>
+            </div>
+        </div>
+
+        <div class="timezone-selector" id="timezoneSelector" style="display: none;">
+            <div class="selector-header">
+                <h3>Select a Time Zone</h3>
+                <button id="closeSelectorBtn" class="btn-close">✕</button>
+            </div>
+            <div class="selector-search">
+                <input 
+                    type="text" 
+                    id="selectorSearchInput" 
+                    placeholder="Search time zones..."
+                    autocomplete="off"
+                >
+            </div>
+            <ul id="timezoneList" class="timezone-list"></ul>
+        </div>
+
+        <div class="clocks-container" id="clocksContainer">
+            <!-- Clocks will be dynamically added here -->
+        </div>
+
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <p>📍 No time zones added yet. Click "Add Time Zone" to get started!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
